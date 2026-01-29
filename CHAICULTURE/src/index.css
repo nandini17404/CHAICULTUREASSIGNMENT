@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chai Culture Design System - Royal Indian Elegance */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 36 50% 97%;
+    --foreground: 24 40% 15%;
+
+    /* Card surfaces */
+    --card: 36 45% 95%;
+    --card-foreground: 24 40% 15%;
+
+    --popover: 36 45% 95%;
+    --popover-foreground: 24 40% 15%;
+
+    /* Deep mahogany brown - primary */
+    --primary: 24 60% 18%;
+    --primary-foreground: 36 50% 97%;
+
+    /* Champagne gold - secondary */
+    --secondary: 43 65% 55%;
+    --secondary-foreground: 24 40% 12%;
+
+    /* Muted warm tones */
+    --muted: 36 30% 90%;
+    --muted-foreground: 24 25% 40%;
+
+    /* Gold accent */
+    --accent: 43 80% 50%;
+    --accent-foreground: 24 40% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 30% 85%;
+    --input: 36 30% 88%;
+    --ring: 43 65% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --gold: 43 80% 50%;
+    --gold-light: 43 70% 70%;
+    --mahogany: 24 60% 18%;
+    --mahogany-light: 24 45% 30%;
+    --cream: 36 50% 97%;
+    --cream-dark: 36 40% 92%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 80% 50%), hsl(43 70% 60%));
+    --gradient-mahogany: linear-gradient(180deg, hsl(24 60% 18%), hsl(24 50% 25%));
+    --gradient-hero: linear-gradient(to bottom, hsl(36 50% 97% / 0.1), hsl(24 60% 18% / 0.95));
+
+    /* Shadows */
+    --shadow-gold: 0 4px 20px -2px hsl(43 80% 50% / 0.25);
+    --shadow-elegant: 0 10px 40px -10px hsl(24 60% 18% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 24 40% 8%;
+    --foreground: 36 50% 95%;
+
+    --card: 24 35% 12%;
+    --card-foreground: 36 50% 95%;
+
+    --popover: 24 35% 12%;
+    --popover-foreground: 36 50% 95%;
+
+    --primary: 43 80% 50%;
+    --primary-foreground: 24 40% 10%;
+
+    --secondary: 24 45% 20%;
+    --secondary-foreground: 36 50% 95%;
+
+    --muted: 24 30% 18%;
+    --muted-foreground: 36 30% 65%;
+
+    --accent: 43 70% 55%;
+    --accent-foreground: 24 40% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 24 30% 20%;
+    --input: 24 30% 20%;
+    --ring: 43 70% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+}
